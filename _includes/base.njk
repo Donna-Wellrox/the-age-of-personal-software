@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if title %}{{ title }} · {% endif %}The Age of Personal Software</title>
+    <meta name="description" content="Personal software is evolving beyond spreadsheets.">
+    <link rel="stylesheet" href="/assets/style.css">
+  </head>
+  <body>
+    <div class="shell">
+      <header class="site-header">
+        <a class="site-name" href="/">The Age of Personal Software</a>
+        <p class="site-tagline">Personal software is evolving beyond spreadsheets.</p>
+      </header>
+
+      <main>
+        {{ content | safe }}
+      </main>
+
+      <footer class="site-footer">
+        <p>Built as a simple static site for GitHub Pages.</p>
+      </footer>
+    </div>
+  </body>
+</html>

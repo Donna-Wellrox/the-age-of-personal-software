@@ -1,0 +1,29 @@
+---
+layout: base.njk
+title: Home
+---
+<section class="hero">
+  <p class="eyebrow">A blog about people building for themselves</p>
+  <h1>The Age of Personal Software</h1>
+  <p class="lede">Personal software is evolving beyond spreadsheets.</p>
+  <p class="intro">Personal software used to mean spreadsheets. Now it can mean much more. This blog explores the people using AI to build tools around their own lives.</p>
+</section>
+
+<section class="post-listing">
+  <div class="section-heading">
+    <h2>Posts</h2>
+    <p>Stories from people building custom tools around their own workflows.</p>
+  </div>
+
+  <ul class="post-list">
+    {% for post in collections.posts %}
+      <li class="post-card">
+        <a href="{{ post.url }}">
+          <h3>{{ post.data.title }}</h3>
+          <p>Why one builder replaced spreadsheets with an AI-native personal finance tool.</p>
+          <span>Read post →</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
