@@ -1,4 +1,7 @@
-# Why I Built My Own AI-Native Personal Finance Tool
+---
+title: Why I Built My Own AI-Native Personal Finance Tool
+description: KolShek started as a way to replace spreadsheet drift with a finance system that an AI agent could actually use.
+---
 
 I built KolShek, a personal finance tool that lets my AI agent work directly with my financial data.
 

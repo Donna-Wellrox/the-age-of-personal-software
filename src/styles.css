@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: Inter, ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Instrument Serif", Georgia, serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-stone-950 text-stone-200 antialiased;
+    background-image:
+      radial-gradient(circle at top, rgba(245, 158, 11, 0.08), transparent 32%),
+      linear-gradient(to bottom, #0c0a09, #14110f 30%, #0c0a09);
+  }
+
+  ::selection {
+    @apply bg-amber-200 text-stone-950;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+}
+
+@utility content-grid {
+  @apply mx-auto w-full max-w-5xl px-5 sm:px-6 lg:px-8;
+}
+
+@utility surface {
+  @apply rounded-3xl border border-white/10 bg-white/5 shadow-2xl shadow-black/20 backdrop-blur;
+}
+
+@utility prose-warm {
+  @apply prose prose-invert max-w-none prose-headings:font-semibold prose-headings:tracking-tight prose-p:text-stone-300 prose-p:leading-8 prose-a:text-amber-200 prose-a:no-underline hover:prose-a:text-amber-100 prose-strong:text-stone-100 prose-code:text-amber-100 prose-code:before:content-none prose-code:after:content-none prose-blockquote:border-amber-300/40 prose-blockquote:text-stone-300 prose-li:text-stone-300;
+}

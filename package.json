@@ -4,10 +4,14 @@
   "private": true,
   "description": "A minimal static blog for GitHub Pages.",
   "scripts": {
-    "start": "eleventy --serve",
-    "build": "eleventy"
+    "build:css": "npx @tailwindcss/cli -i ./src/styles.css -o ./assets/app.css --minify",
+    "build": "npm run build:css && eleventy",
+    "start": "npm run build && eleventy --serve"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.2"
+    "@11ty/eleventy": "^3.1.2",
+    "@tailwindcss/cli": "^4.1.13",
+    "@tailwindcss/typography": "^0.5.16",
+    "tailwindcss": "^4.1.13"
   }
 }

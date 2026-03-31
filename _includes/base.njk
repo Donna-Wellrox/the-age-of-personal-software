@@ -1,26 +1,38 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="h-full">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% if title %}{{ title }} · {% endif %}The Age of Personal Software</title>
-    <meta name="description" content="Personal software is evolving beyond spreadsheets.">
-    <link rel="stylesheet" href="/assets/style.css">
+    <meta name="description" content="{{ description or 'Personal software is evolving beyond spreadsheets.' }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/app.css' | url }}">
   </head>
-  <body>
-    <div class="shell">
-      <header class="site-header">
-        <a class="site-name" href="/">The Age of Personal Software</a>
-        <p class="site-tagline">Personal software is evolving beyond spreadsheets.</p>
-      </header>
+  <body class="min-h-full">
+    <div class="content-grid py-6 sm:py-8 lg:py-10">
+      <div class="surface overflow-hidden">
+        <header class="border-b border-white/10 px-5 py-5 sm:px-8 sm:py-6">
+          <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div class="space-y-2">
+              <a class="inline-flex items-center text-xs font-semibold uppercase tracking-[0.28em] text-amber-200/90 hover:text-amber-100" href="{{ '/' | url }}">The Age of Personal Software</a>
+              <p class="max-w-2xl text-sm text-stone-400 sm:text-base">Personal software is evolving beyond spreadsheets.</p>
+            </div>
+            <nav class="text-sm text-stone-400">
+              <a class="hover:text-stone-100" href="{{ '/' | url }}#posts">Posts</a>
+            </nav>
+          </div>
+        </header>
 
-      <main>
-        {{ content | safe }}
-      </main>
+        <main class="px-5 py-8 sm:px-8 sm:py-10 lg:py-12">
+          {{ content | safe }}
+        </main>
 
-      <footer class="site-footer">
-        <p>Built as a simple static site for GitHub Pages.</p>
-      </footer>
+        <footer class="border-t border-white/10 px-5 py-5 text-sm text-stone-500 sm:px-8">
+          Built with Eleventy and Tailwind CSS. Static output is ready for GitHub Pages.
+        </footer>
+      </div>
     </div>
   </body>
 </html>
