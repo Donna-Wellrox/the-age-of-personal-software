@@ -4,7 +4,7 @@ layout: base.njk
 <article class="mx-auto max-w-3xl">
   <a href="{{ '/' | url }}" class="inline-flex items-center gap-2 text-sm font-medium text-amber-200 hover:text-amber-100">← Back to home</a>
 
-  <header class="mt-8 border-b border-white/10 pb-8">
+  <header class="post-hero mt-8 rounded-3xl border border-white/10 px-6 py-8 sm:px-8">
     <p class="text-xs font-semibold uppercase tracking-[0.28em] text-stone-500">Essay</p>
     <h1 class="mt-4 font-serif text-4xl leading-tight tracking-tight text-stone-50 sm:text-5xl">{{ title }}</h1>
     {% if description %}
@@ -12,7 +12,7 @@ layout: base.njk
     {% endif %}
   </header>
 
-  <div class="prose-warm mt-8">
+  <div class="prose-warm mt-10">
     {{ content | safe }}
   </div>
 </article>

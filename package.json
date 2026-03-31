@@ -4,8 +4,9 @@
   "private": true,
   "description": "A minimal static blog for GitHub Pages.",
   "scripts": {
+    "clean": "rm -rf _site",
     "build:css": "npx @tailwindcss/cli -i ./src/styles.css -o ./assets/app.css --minify",
-    "build": "npm run build:css && eleventy",
+    "build": "npm run clean && npm run build:css && eleventy",
     "start": "npm run build && eleventy --serve"
   },
   "devDependencies": {
