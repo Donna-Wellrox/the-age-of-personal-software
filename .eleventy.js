@@ -5,11 +5,13 @@ module.exports = function (eleventyConfig) {
     return collectionApi.getFilteredByTag("posts").reverse();
   });
 
+  const pathPrefix = process.env.ELEVENTY_PATH_PREFIX || "/the-age-of-personal-software/";
+
   return {
     dir: {
       includes: "_includes"
     },
-    pathPrefix: process.env.ELEVENTY_PATH_PREFIX || "/",
+    pathPrefix,
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk"
   };
