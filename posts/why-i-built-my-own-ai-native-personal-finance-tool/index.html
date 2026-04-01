@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Why I Built My Own AI-Native Personal Finance Tool · The Age of Personal Software</title>
+    <meta name="description" content="KolShek started as a way to replace spreadsheet drift with a finance system that an AI agent could actually use.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/the-age-of-personal-software/assets/app.css">
+  </head>
+  <body class="min-h-full">
+    <div class="ambient-glow"></div>
+    <div class="content-grid py-6 sm:py-8 lg:py-10">
+      <div class="surface overflow-hidden">
+        <header class="border-b border-white/10 px-5 py-5 sm:px-8 sm:py-6">
+          <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div class="space-y-3">
+              <a class="inline-flex items-center text-xs font-semibold uppercase tracking-[0.28em] text-amber-200/90 hover:text-amber-100" href="/the-age-of-personal-software/">The Age of Personal Software</a>
+              <p class="max-w-2xl text-sm leading-7 text-stone-400 sm:text-base">Personal software is evolving beyond spreadsheets.</p>
+            </div>
+            <nav class="nav-pill text-sm text-stone-300">
+              <a class="hover:text-stone-100" href="/the-age-of-personal-software/#posts">Posts</a>
+            </nav>
+          </div>
+        </header>
+
+        <main class="px-5 py-8 sm:px-8 sm:py-10 lg:py-12">
+          <article class="mx-auto max-w-3xl">
+  <a href="/the-age-of-personal-software/" class="inline-flex items-center gap-2 text-sm font-medium text-amber-200 hover:text-amber-100">← Back to home</a>
+
+  <header class="post-hero mt-8 rounded-3xl border border-white/10 px-6 py-8 sm:px-8">
+    <p class="text-xs font-semibold uppercase tracking-[0.28em] text-stone-500">Essay</p>
+    <h1 class="mt-4 font-serif text-4xl leading-tight tracking-tight text-stone-50 sm:text-5xl">Why I Built My Own AI-Native Personal Finance Tool</h1>
+    
+      <p class="mt-4 max-w-2xl text-lg leading-8 text-stone-400">KolShek started as a way to replace spreadsheet drift with a finance system that an AI agent could actually use.</p>
+    
+  </header>
+
+  <div class="prose-warm mt-10">
+    <h2>Who built it and what it is</h2>
+<p>I built KolShek, a personal finance tool that lets my AI agent work directly with my financial data.</p>
+<p>It uses Israeli bank scrapers to pull transactions from my bank accounts and credit cards into a local SQLite database. From there, I can query the data through a CLI, view it in a dashboard, and run things like translation and categorization on top of it. I also exposed it to my AI agent through a custom skill, which means I can ask questions about my finances in plain language, get feedback, and check in every couple of days to see how things are going. It has already helped me spot overspending in certain categories and notice subscriptions I didn’t really need.</p>
+<h2>Why I needed it</h2>
+<p>Before KolShek, I tracked things manually in spreadsheets. It never really worked. I would skip months, forget to enter transactions, miss important details, and lose any clear view of the full picture. I never managed to build a consistent spreadsheet habit, and I’m just not the kind of person who enjoys maintaining financial systems by hand.</p>
+<p>Over time, I felt lost in my own finances: I had no real goals, no reliable visibility, and money was being spent without me really understanding where it was going.</p>
+<h2>Why existing tools weren’t enough</h2>
+<p>There were already tools I could have used, including paid products like RiseUp and prebuilt spreadsheet templates. But none of them really fit how I think about money. The paid tools felt like someone else’s model of financial life. The templates had the same weakness as my own setup: they still relied on manual upkeep.</p>
+<p>What I needed was not another template, but something automated.</p>
+<h2>How I built it with AI</h2>
+<p>I started with the idea and the main pieces I knew the system needed. From there, I used Claude Code to help plan the project. I chose Bun as the stack, since it felt like the obvious fit for a CLI tool with a dashboard, SQLite, and OS keychain support, and then I mostly switched into build mode and vibe-coded the rest.</p>
+<p>AI did most of the implementation work. My role was mainly to think through the architecture, judge whether the plans made sense, and test what it produced. The workflow was simple: have the AI write it, test it, find bugs, send the bugs back, and repeat. Before releases, I also used AI agents for targeted QA and security checks.</p>
+<h2>Challenges I had to overcome</h2>
+<p>The tool is still unfinished. The dashboard needs work. Some of the finance functions and agent skills are still rough. I also don’t come from a finance background, so it isn’t always obvious what the right features or workflows should be.</p>
+<p>A lot of the learning has happened through use: the more I use the system, the more clearly I understand what it needs to become.</p>
+<h2>Closing</h2>
+<p>But it already does something spreadsheets and off-the-shelf tools never really did for me: it gives me a financial system I actually want to use.</p>
+
+  </div>
+</article>
+
+        </main>
+
+        <footer class="border-t border-white/10 px-5 py-5 text-sm text-stone-500 sm:px-8">
+          Built with Eleventy and Tailwind CSS. Static output is ready for GitHub Pages.
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
